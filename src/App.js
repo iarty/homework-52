@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import Lottery from './components/lottery/lottery.js'
+import OutputNumber from './components/lottery/lottery.js'
 
-export default class index extends Component {
+export default class Lottery extends Component {
   state = {
     num: []
   }
 
-  numGen = () => {
+  numberGenerator = () => {
     let arr = [];
     do {
-      let num = Math.floor(Math.random() * (36 - 5 + 1)) + 5;
-      arr.push(num);
+      arr.push(Math.floor(Math.random() * (36 - 6)) + 5)
       arr = arr.filter((item, index) => {
         return arr.indexOf(item) === index
       });
@@ -20,13 +19,11 @@ export default class index extends Component {
     });
   }
 
-  genNum = () => {
+  changeState = () => {
     let numArr = [...this.state.num];
-    numArr = [...this.numGen()];
-    this.setState({ num:numArr })
+    numArr = [...this.numberGenerator()];
+    this.setState({ num: numArr })
   }
 
-  render = () => {
-    return (<Lottery genNum={this.genNum} num={this.state.num} />)
-  }
+  render = () => (<OutputNumber genNum={this.changeState} num={this.state.num} />)
 }
