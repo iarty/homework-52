@@ -16,6 +16,7 @@ const Lottery = (props) => {
             <span className="display-3" style={{ borderBottom: '2px solid red', width: '70px', height: '70px' }}>{props.num[1]}</span>
             <span className="display-3" style={{ borderBottom: '2px solid red', width: '70px', height: '70px' }}>{props.num[2]}</span>
             <span className="display-3" style={{ borderBottom: '2px solid red', width: '70px', height: '70px' }}>{props.num[3]}</span>
+            <span className="display-3" style={{ borderBottom: '2px solid red', width: '70px', height: '70px' }}>{props.num[4]}</span>
           </div>
         </div>
       </Container>

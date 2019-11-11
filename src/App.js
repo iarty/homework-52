@@ -14,7 +14,7 @@ export default class index extends Component {
             arr = arr.filter((item, index) => {
                 return arr.indexOf(item) === index
             });
-        } while (arr.length < 4);
+        } while (arr.length < 5);
         return arr.sort((a, b) => {
             return a - b
         });
