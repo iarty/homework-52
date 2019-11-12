@@ -20,8 +20,7 @@ export default class Lottery extends Component {
   }
 
   changeState = () => {
-    let numArr = [...this.state.num];
-    numArr = [...this.numberGenerator()];
+    const numArr = this.numberGenerator();
     this.setState({ num: numArr })
   }
 
